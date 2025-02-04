@@ -30,14 +30,14 @@ header {
 
 header h1 {
   font-size: 3.5rem;
-  margin-bottom: 10px;
+  margin-bottom: 30px; /* Zwiększenie odstępu */
   letter-spacing: 2px;
   animation: fadeInUp 1s ease-out;
 }
 
 header p {
   font-size: 1.3rem;
-  margin-bottom: 30px;
+  margin-bottom: 40px; /* Zwiększenie odstępu */
   font-weight: 300;
   animation: fadeInUp 1.5s ease-out;
 }
@@ -72,31 +72,33 @@ header p {
 /* Sekcja z usługami */
 .services {
   background-color: #fff;
-  padding: 60px 0;
+  padding: 80px 0; /* Zwiększenie odstępu */
 }
 
 .services h2 {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 40px;
+  margin-bottom: 50px; /* Zwiększenie odstępu */
   color: #333;
 }
 
+/* Flexbox dla kart usług - wyświetlanie poziomo */
 .service-cards {
   display: flex;
   justify-content: space-between;
-  gap: 30px;
-  flex-wrap: wrap;
+  gap: 50px; /* Większa przerwa między kartami */
+  flex-wrap: wrap; /* Dostosowanie do mniejszych ekranów */
 }
 
 .service-card {
   background-color: #fafafa;
-  padding: 30px;
+  padding: 40px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   flex: 1;
   transition: transform 0.3s ease;
+  max-width: 300px; /* Ograniczenie szerokości kart */
 }
 
 .service-card h3 {
@@ -138,7 +140,7 @@ footer a:hover {
   color: #fff;
 }
 
-/* Responsywność */
+/* Responsywność - dla ekranów mniejszych niż 768px */
 @media (max-width: 768px) {
   header h1 {
     font-size: 2.5rem;
@@ -149,10 +151,12 @@ footer a:hover {
   }
 
   .service-cards {
-    flex-direction: column;
+    flex-direction: column; /* Zmiana na układ pionowy na mniejszych ekranach */
+    gap: 20px;
   }
 
   .service-card {
-    margin-bottom: 20px;
+    max-width: 100%; /* Karty będą miały pełną szerokość */
   }
 }
+
