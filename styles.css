@@ -1,129 +1,158 @@
-/* Globalne resetowanie stylów */
+/* Resetowanie stylów */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif; /* Nowoczesna czcionka */
+  font-family: 'Roboto', sans-serif;
 }
 
-/* Tło strony */
+/* Styl ciała strony */
 body {
-  background-color: #f4f4f9; /* Jasne tło, przyjemne dla oka */
-  color: #333; /* Ciemny tekst */
+  background-color: #f1f1f1;
+  color: #333;
   line-height: 1.6;
-  font-size: 16px;
-  overflow-x: hidden;
 }
 
-/* Nagłówek strony */
+/* Kontener dla centralizacji treści */
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Nagłówek */
 header {
-  background: linear-gradient(90deg, #1e3c72, #2a5298); /* Gradientowy nagłówek */
-  color: #fff;
-  padding: 20px 0;
+  background: linear-gradient(45deg, #1e3c72, #2a5298);
+  color: white;
+  padding: 80px 0;
   text-align: center;
 }
 
-/* Nagłówek h1 */
 header h1 {
-  font-size: 3rem;
-  letter-spacing: 1px;
-  animation: fadeIn 2s ease-out; /* Delikatne pojawienie się tekstu */
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  animation: fadeInUp 1s ease-out;
 }
 
-/* Efekt fadeIn dla animacji */
-@keyframes fadeIn {
+header p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.cta-button {
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #ff7f50;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e66a33;
+}
+
+/* Animacja dla nagłówków */
+@keyframes fadeInUp {
   from {
     opacity: 0;
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* Sekcja główna */
-.main-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 50px 20px;
+/* Sekcja z usługami */
+.services {
+  background-color: #fff;
+  padding: 60px 0;
+}
+
+.services h2 {
   text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
 }
 
-/* Przyciski */
-button {
-  background-color: #1e3c72;
-  color: white;
-  border: none;
-  padding: 15px 30px;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+.service-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
-/* Efekty przycisku po najechaniu */
-button:hover {
-  background-color: #2a5298;
-  transform: translateY(-5px); /* Podnosi przycisk po najechaniu */
+.service-card {
+  background-color: #fafafa;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex: 1;
+  transition: transform 0.3s ease;
 }
 
-button:active {
-  transform: translateY(0); /* Powrót do pierwotnej pozycji */
+.service-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-/* Responsywność - tabela */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2.5rem;
-  }
-
-  .main-section {
-    padding: 30px 10px;
-  }
-
-  button {
-    padding: 12px 25px;
-  }
+.service-card p {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.4;
 }
 
-/* Sekcja z treścią */
-.content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 50px 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  text-align: left;
-}
-
-/* Responsywność dla treści */
-@media (max-width: 768px) {
-  .content {
-    grid-template-columns: 1fr;
-  }
+.service-card:hover {
+  transform: translateY(-10px);
 }
 
 /* Stopka */
 footer {
   background-color: #333;
   color: #fff;
+  padding: 30px 0;
   text-align: center;
-  padding: 20px 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
 }
 
-/* Styl linków */
-a {
+footer p {
+  font-size: 1rem;
+}
+
+footer a {
+  color: #ff7f50;
   text-decoration: none;
-  color: #fff;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
-a:hover {
-  color: #ff7f50; /* Kolor zmienia się na koralowy przy najechaniu */
+footer a:hover {
+  color: #fff;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header p {
+    font-size: 1.1rem;
+  }
+
+  .service-cards {
+    flex-direction: column;
+  }
+
+  .service-card {
+    margin-bottom: 20px;
+  }
 }
