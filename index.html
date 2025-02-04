@@ -1,163 +1,47 @@
-/* Resetowanie stylów i ustawienie domyślnych wartości */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Roboto', sans-serif; /* Czcionka roboto */
-}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Przewieziemy To</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Linkowanie pliku CSS -->
+</head>
+<body>
 
-body {
-  background-color: #f1f1f1;
-  color: #333;
-  line-height: 1.6;
-}
+  <header>
+    <div class="container">
+      <h1>Przewieziemy To</h1>
+      <p>Profesjonalne usługi transportowe</p>
+      <button class="cta-button">Skontaktuj się z nami</button>
+    </div>
+  </header>
 
-/* Styl dla kontenerów */
-.container {
-  width: 90%;
-  margin: 0 auto;
-  max-width: 1200px;
-}
+  <section class="services">
+    <div class="container">
+      <h2>Nasze usługi</h2>
+      <div class="service-cards">
+        <div class="service-card">
+          <h3>Transport krajowy</h3>
+          <p>Bezpieczny i szybki transport na terenie całego kraju.</p>
+        </div>
+        <div class="service-card">
+          <h3>Transport międzynarodowy</h3>
+          <p>Oferujemy usługi transportowe do wielu krajów w Europie.</p>
+        </div>
+        <div class="service-card">
+          <h3>Transport dla firm</h3>
+          <p>Profesjonalna obsługa transportu dla biznesu i firm.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-/* Nagłówek */
-header {
-  background: linear-gradient(45deg, #1e3c72, #2a5298); /* Gradientowy nagłówek */
-  color: white;
-  padding: 80px 0;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-header h1 {
-  font-size: 3.5rem;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
-  animation: fadeInUp 1s ease-out;
-}
-
-header p {
-  font-size: 1.3rem;
-  margin-bottom: 30px;
-  font-weight: 300;
-  animation: fadeInUp 1.5s ease-out;
-}
-
-.cta-button {
-  padding: 15px 35px;
-  font-size: 1.1rem;
-  color: #fff;
-  background-color: #ff7f50;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  animation: fadeInUp 2s ease-out;
-}
-
-.cta-button:hover {
-  background-color: #e66a33;
-}
-
-/* Animacja dla nagłówków */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Sekcja usług */
-.services {
-  background-color: #fff;
-  padding: 60px 0;
-}
-
-.services h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #333;
-}
-
-.service-cards {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.service-card {
-  background-color: #fafafa;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  flex: 1;
-  transition: transform 0.3s ease;
-}
-
-.service-card h3 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.service-card p {
-  font-size: 1.1rem;
-  color: #666;
-  line-height: 1.4;
-}
-
-.service-card:hover {
-  transform: translateY(-10px);
-}
-
-/* Stopka */
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 30px 0;
-  text-align: center;
-}
-
-footer p {
-  font-size: 1rem;
-}
-
-footer a {
-  color: #ff7f50;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-footer a:hover {
-  color: #fff;
-}
-
-/* Responsywność */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2.5rem;
-  }
-
-  header p {
-    font-size: 1.1rem;
-  }
-
-  .service-cards {
-    flex-direction: column;
-  }
-
-  .service-card {
-    margin-bottom: 20px;
-  }
-}
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Przewieziemy To. Wszystkie prawa zastrzeżone.</p>
+      <p><a href="#">Polityka prywatności</a> | <a href="#">Regulamin</a></p>
+    </div>
+  </footer>
 
 </body>
 </html>
