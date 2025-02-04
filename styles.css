@@ -3,12 +3,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Arial', sans-serif;
 }
 
 /* Styl ciała strony */
 body {
-  background-color: #f1f1f1;
+  background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
 }
@@ -22,7 +22,7 @@ body {
 
 /* Nagłówek */
 header {
-  background: linear-gradient(45deg, #1e3c72, #2a5298);
+  background: #2C3E50;
   color: white;
   padding: 80px 0;
   text-align: center;
@@ -30,75 +30,57 @@ header {
 
 header h1 {
   font-size: 3.5rem;
-  margin-bottom: 30px; /* Zwiększenie odstępu */
-  letter-spacing: 2px;
-  animation: fadeInUp 1s ease-out;
+  margin-bottom: 20px;
 }
 
 header p {
   font-size: 1.3rem;
-  margin-bottom: 40px; /* Zwiększenie odstępu */
+  margin-bottom: 40px;
   font-weight: 300;
-  animation: fadeInUp 1.5s ease-out;
 }
 
 .cta-button {
   padding: 15px 35px;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #fff;
-  background-color: #ff7f50;
+  background-color: #E74C3C;
   border: none;
-  border-radius: 50px;
+  border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #e66a33;
+  background-color: #C0392B;
 }
 
-/* Animacja dla nagłówków */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Sekcja z usługami */
+/* Sekcja usług */
 .services {
   background-color: #fff;
-  padding: 80px 0; /* Zwiększenie odstępu */
+  padding: 80px 0;
 }
 
 .services h2 {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 50px; /* Zwiększenie odstępu */
+  margin-bottom: 50px;
   color: #333;
 }
 
-/* Flexbox dla kart usług - wyświetlanie poziomo */
 .service-cards {
   display: flex;
   justify-content: space-between;
-  gap: 50px; /* Większa przerwa między kartami */
-  flex-wrap: wrap; /* Dostosowanie do mniejszych ekranów */
+  gap: 30px;
 }
 
 .service-card {
-  background-color: #fafafa;
-  padding: 40px;
+  background-color: #ecf0f1;
+  padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   flex: 1;
   transition: transform 0.3s ease;
-  max-width: 300px; /* Ograniczenie szerokości kart */
 }
 
 .service-card h3 {
@@ -117,10 +99,55 @@ header p {
   transform: translateY(-10px);
 }
 
+/* Formularz kontaktowy */
+.contact-form {
+  background-color: #fff;
+  padding: 80px 0;
+}
+
+.contact-form h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 60%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  width: 60%;
+  padding: 15px;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #E74C3C;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #C0392B;
+}
+
 /* Stopka */
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #2C3E50;
+  color: white;
   padding: 30px 0;
   text-align: center;
 }
@@ -130,33 +157,11 @@ footer p {
 }
 
 footer a {
-  color: #ff7f50;
+  color: #E74C3C;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease;
 }
 
 footer a:hover {
-  color: #fff;
+  color: white;
 }
-
-/* Responsywność - dla ekranów mniejszych niż 768px */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2.5rem;
-  }
-
-  header p {
-    font-size: 1.1rem;
-  }
-
-  .service-cards {
-    flex-direction: column; /* Zmiana na układ pionowy na mniejszych ekranach */
-    gap: 20px;
-  }
-
-  .service-card {
-    max-width: 100%; /* Karty będą miały pełną szerokość */
-  }
-}
-
