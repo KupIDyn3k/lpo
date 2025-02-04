@@ -6,7 +6,7 @@
   font-family: 'Arial', sans-serif;
 }
 
-/* Styl ciała strony */
+/* Ciało strony */
 body {
   background-color: #f4f4f4;
   color: #333;
@@ -22,20 +22,20 @@ body {
 
 /* Nagłówek */
 header {
-  background: #2C3E50;
+  background: #34495e;
   color: white;
   padding: 80px 0;
   text-align: center;
 }
 
 header h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-bottom: 20px;
 }
 
 header p {
-  font-size: 1.3rem;
-  margin-bottom: 40px;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
   font-weight: 300;
 }
 
@@ -43,7 +43,7 @@ header p {
   padding: 15px 35px;
   font-size: 1.2rem;
   color: #fff;
-  background-color: #E74C3C;
+  background-color: #e74c3c;
   border: none;
   border-radius: 30px;
   cursor: pointer;
@@ -51,7 +51,7 @@ header p {
 }
 
 .cta-button:hover {
-  background-color: #C0392B;
+  background-color: #c0392b;
 }
 
 /* Sekcja usług */
@@ -99,20 +99,26 @@ header p {
   transform: translateY(-10px);
 }
 
-/* Formularz kontaktowy */
-.contact-form {
+/* Sekcja kontaktowa */
+.contact {
   background-color: #fff;
   padding: 80px 0;
 }
 
-.contact-form h2 {
+.contact h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 50px;
   color: #333;
 }
 
-.contact-form form {
+.contact p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.contact-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -133,7 +139,7 @@ header p {
   padding: 15px;
   font-size: 1.2rem;
   color: white;
-  background-color: #E74C3C;
+  background-color: #e74c3c;
   border: none;
   border-radius: 30px;
   cursor: pointer;
@@ -141,12 +147,12 @@ header p {
 }
 
 .contact-form button:hover {
-  background-color: #C0392B;
+  background-color: #c0392b;
 }
 
 /* Stopka */
 footer {
-  background-color: #2C3E50;
+  background-color: #34495e;
   color: white;
   padding: 30px 0;
   text-align: center;
@@ -157,7 +163,7 @@ footer p {
 }
 
 footer a {
-  color: #E74C3C;
+  color: #e74c3c;
   text-decoration: none;
   font-weight: bold;
 }
